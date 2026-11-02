@@ -1,128 +1,812 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HUNANIMA - Machines Agricoles Simples</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fefefe;
-      color: #333;
-    }
-    header {
-      background-color: #2e7d32; /* Vert foncé */
-      color: #fdd835; /* Jaune vif */
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-size: 1.2em;
-    }
-    nav {
-      background-color: #fdd835;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #2e7d32;
-    }
-    .hero {
-      background: url('https://i.pinimg.com/550x/a9/df/51/a9df5172829f8c05f5b92f97553d41ae.jpg') no-repeat center center/cover;
-      height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 4px #000;
-      font-size: 2em;
-    }
-    section {
-      padding: 50px 20px;
-      text-align: center;
-    }
-    section h2 {
-      color: #2e7d32;
-      margin-bottom: 20px;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .gallery img {
-      width: 280px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    footer {
-      background-color: #2e7d32;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-    footer p {
-      margin: 5px 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan Performance Apparel LLC | High-Performance Athletic & Retail Wear</title>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+    <style>
+        /* Athletic Carbon Black, Electric Crimson & Slate Palette */
+        :root {
+            --bg-dark: #0f1115;
+            --bg-card: #181b22;
+            --crimson-primary: #e11d48;
+            --crimson-hover: #be123c;
+            --crimson-soft: rgba(225, 29, 72, 0.15);
+            --slate-gray: #272a34;
+            --text-light: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #2f3442;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Top Announcement Strip */
+        .top-notice {
+            background: #090a0d;
+            color: #d1d5db;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.65rem 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .top-notice div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Header Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(15, 17, 21, 0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.25rem 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.35rem;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        .brand i {
+            color: var(--crimson-primary);
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--crimson-primary);
+        }
+
+        .btn-crimson {
+            background: var(--crimson-primary);
+            color: #ffffff;
+            padding: 0.75rem 1.6rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 14px rgba(225, 29, 72, 0.3);
+        }
+
+        .btn-crimson:hover {
+            background: var(--crimson-hover);
+            transform: translateY(-2px);
+        }
+
+        .wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        #about {
+            padding: 5rem 0 3rem 0;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--crimson-soft);
+            color: var(--crimson-primary);
+            border: 1px solid var(--crimson-primary);
+            padding: 0.35rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero-text h1 {
+            font-size: 3.3rem;
+            line-height: 1.15;
+            color: #ffffff;
+            font-weight: 900;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.025em;
+            text-transform: uppercase;
+        }
+
+        .hero-text h1 span {
+            color: var(--crimson-primary);
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .stat-card h4 {
+            font-size: 1.25rem;
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        .stat-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        .hero-image-container {
+            position: relative;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--border-color);
+        }
+
+        .floating-card {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 1.25rem 1.5rem;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        .floating-card i {
+            color: var(--crimson-primary);
+            background: var(--crimson-soft);
+            padding: 0.75rem;
+            border-radius: 12px;
+        }
+
+        /* Interactive Apparel Showcase Deck Section */
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 6rem auto 3rem auto;
+        }
+
+        .section-header span {
+            color: var(--crimson-primary);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.35rem;
+            color: #ffffff;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .deck-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            margin-bottom: 6rem;
+        }
+
+        .deck-tabs {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .deck-tab-btn {
+            background: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            padding: 0.85rem 1.75rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .deck-tab-btn.active, .deck-tab-btn:hover {
+            background: var(--crimson-primary);
+            color: #ffffff;
+            border-color: var(--crimson-primary);
+        }
+
+        .deck-panel {
+            display: none;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .deck-panel.active {
+            display: grid;
+        }
+
+        .panel-text h3 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .panel-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .panel-bullets {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .panel-bullets li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .panel-bullets li i {
+            color: var(--crimson-primary);
+        }
+
+        .panel-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--crimson-primary);
+            box-shadow: 0 16px 32px rgba(225, 29, 72, 0.15);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .service-card-body {
+            padding: 2rem;
+        }
+
+        .service-card-body h3 {
+            font-size: 1.25rem;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+            font-weight: 800;
+        }
+
+        .service-card-body p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact-box {
+            background: var(--bg-card);
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            padding: 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            margin-bottom: 6rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .info-row {
+            display: flex;
+            gap: 1.25rem;
+            margin-top: 2rem;
+            align-items: flex-start;
+        }
+
+        .info-row i {
+            color: var(--crimson-primary);
+            background: var(--crimson-soft);
+            padding: 1rem;
+            border-radius: 14px;
+        }
+
+        .info-row label {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        .info-row strong {
+            font-size: 1rem;
+            color: #ffffff;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .contact-form input, .contact-form textarea, .contact-form select {
+            width: 100%;
+            background: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1rem;
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+            outline: none;
+            border-color: var(--crimson-primary);
+            background: var(--bg-card);
+        }
+
+        .submit-btn {
+            background: var(--crimson-primary);
+            color: #ffffff;
+            border: none;
+            padding: 1.1rem;
+            border-radius: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--crimson-hover);
+        }
+
+        /* Modal Privacy Policy */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 17, 21, 0.85);
+            backdrop-filter: blur(6px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-body {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            max-width: 750px;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 3rem;
+            position: relative;
+            color: var(--text-muted);
+        }
+
+        .modal-body h3 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-body h4 {
+            color: #ffffff;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #090a0d;
+            color: var(--text-muted);
+            padding: 3rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--crimson-primary);
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        @media (max-width: 1024px) {
+            #about, .deck-panel, .contact-box {
+                grid-template-columns: 1fr;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>HUNANIMA</h1>
-    <p>Machines Agricoles Simples et Fiables</p>
-  </header>
-
-  <nav>
-    <a href="#about">À propos</a>
-    <a href="#gallery">Galerie</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="hero">
-    <p>Votre partenaire pour des machines agricoles durables</p>
-  </div>
-
-  <section id="about">
-    <h2>À propos de nous</h2>
-    <p>
-      Chez <strong>HUNANIMA</strong>, nous nous spécialisons dans la fabrication et la distribution de 
-      <strong>machines agricoles simples</strong> pour faciliter le travail des agriculteurs. 
-      Nos solutions combinent <em>durabilité, efficacité et innovation</em> afin de répondre aux besoins de toutes les exploitations.
-    </p>
-  </section>
-
-  <section id="gallery">
-    <h2>Nos Machines</h2>
-    <div class="gallery">
-      <img src="http://ogden_images.s3.amazonaws.com/www.motherearthnews.com/images/2014/11/22234423/Boaz-Mini-Combine-jpg.jpg" alt="Mini moissonneuse">
-      <img src="https://krs-agro.ru/products/zagotovka_kormov/elho/19/7.jpg" alt="Machine agricole">
-      <img src="https://img.mod-network.net/files/images/6218ac69d37fb/SimpleFarmSilov1000_6222.jpg" alt="Équipement agricole simple">
+    <div class="top-notice">
+        <div><i data-lucide="zap" size="15"></i> TITAN PERFORMANCE APPAREL LLC — High-Performance Athletic & Retail Wear</div>
+        <div>Douglasville, GA Headquarters</div>
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contactez-nous</h2>
-    <p><strong>Email :</strong> admin@tyusex.shop</p>
-    <p><strong>Téléphone :</strong> +33 7 38 50 26 36</p>
-    <p><strong>Adresse :</strong> Avenue Baratier, Montmorency, 95160, France</p>
-  </section>
+    <header>
+        <div class="brand">
+            <i data-lucide="shield"></i> Titan Performance
+        </div>
+        <nav>
+            <a href="#about">Overview</a>
+            <a href="#showcase">Apparel Line</a>
+            <a href="#retail">Retail Collections</a>
+            <a href="#contact" class="btn-crimson">Wholesale & Contact</a>
+        </nav>
+    </header>
 
-  <footer>
-    <p>&copy; 2025 HUNANIMA - Tous droits réservés.</p>
-  </footer>
+    <div class="wrapper">
+        <!-- Hero Section -->
+        <section id="about">
+            <div class="hero-text">
+                <span class="hero-badge">Elite Athletic Wear & Retail</span>
+                <h1>Engineered For Strength <span>Built For Peak Performance</span></h1>
+                <p>Titan Performance Apparel LLC designs and distributes high-performance athletic wear, technical training gear, and premium clothing accessories in Douglasville, Georgia.</p>
 
+                <a href="#contact" class="btn-crimson" style="padding: 1rem 2rem; display: inline-block;">Explore Retail Catalog</a>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h4>Douglasville, GA</h4>
+                        <p>8764 Hamil Ct</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>NAICS 4581</h4>
+                        <p>Clothing Retailers</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>SIC 5621</h4>
+                        <p>Apparel & Retail</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-container">
+                <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Athletic training apparel and fitness gear showcase">
+                <div class="floating-card">
+                    <i data-lucide="activity" size="28"></i>
+                    <div>
+                        <strong style="color: #ffffff; display: block;">Peak Endurance</strong>
+                        <span style="color: var(--text-muted); font-size: 0.85rem;">Advanced Technical Fabrics</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Apparel Showcase Deck Section -->
+        <section id="showcase">
+            <div class="section-header">
+                <span>Product Engineering</span>
+                <h2>Performance Apparel Collection Deck</h2>
+            </div>
+
+            <div class="deck-container">
+                <div class="deck-tabs">
+                    <button class="deck-tab-btn active" onclick="switchDeck(0)">1. Technical Training Wear</button>
+                    <button class="deck-tab-btn" onclick="switchDeck(1)">2. Compression & Support</button>
+                    <button class="deck-tab-btn" onclick="switchDeck(2)">3. Retail & Lifestyle Gear</button>
+                </div>
+
+                <!-- Panel 1 -->
+                <div class="deck-panel active">
+                    <div class="panel-text">
+                        <h3>High-Performance Training Gear</h3>
+                        <p>Engineered with moisture-wicking technology, breathable mesh ventilation, and ultra-durable stretch fabrics for intense workouts.</p>
+                        <ul class="panel-bullets">
+                            <li><i data-lucide="check-circle-2"></i> Advanced Moisture-Wicking Textiles</li>
+                            <li><i data-lucide="check-circle-2"></i> 4-Way Ergonomic Stretch Fit</li>
+                            <li><i data-lucide="check-circle-2"></i> Anti-Chafing Flatlock Seams</li>
+                        </ul>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=800&q=80" alt="Athlete wearing modern performance training apparel" class="panel-img">
+                </div>
+
+                <!-- Panel 2 -->
+                <div class="deck-panel">
+                    <div class="panel-text">
+                        <h3>Targeted Compression & Support</h3>
+                        <p>Designed to optimize muscle recovery, enhance blood circulation, and provide superior muscle stability during heavy training sessions.</p>
+                        <ul class="panel-bullets">
+                            <li><i data-lucide="check-circle-2"></i> Graduated Muscle Compression</li>
+                            <li><i data-lucide="check-circle-2"></i> Enhanced Post-Workout Recovery</li>
+                            <li><i data-lucide="check-circle-2"></i> Locked-In Support & Stability</li>
+                        </ul>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80" alt="Athletic compression gear and fitness apparel" class="panel-img">
+                </div>
+
+                <!-- Panel 3 -->
+                <div class="deck-panel">
+                    <div class="panel-text">
+                        <h3>Retail Lifestyle & Outerwear</h3>
+                        <p>Combining athletic functionality with modern streetwear aesthetics for effortless everyday wear and post-workout comfort.</p>
+                        <ul class="panel-bullets">
+                            <li><i data-lucide="check-circle-2"></i> Premium Cotton-Blend Fleece</li>
+                            <li><i data-lucide="check-circle-2"></i> Modern Athletic Tailoring</li>
+                            <li><i data-lucide="check-circle-2"></i> Durable Weather-Resistant Shells</li>
+                        </ul>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" alt="Stylish athletic apparel and casual sportswear" class="panel-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section id="retail">
+            <div class="section-header">
+                <span>Retail & Distribution</span>
+                <h2>Comprehensive Apparel Services</h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Modern apparel retail store display">
+                    <div class="service-card-body">
+                        <h3>Retail & E-Commerce Supply</h3>
+                        <p>Providing high-demand athletic clothing and accessories for retail storefronts and online distribution networks.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80" alt="Clothing apparel collection neatly organized">
+                    <div class="service-card-body">
+                        <h3>Wholesale Bulk Ordering</h3>
+                        <p>Scalable wholesale supply options for fitness centers, gyms, athletic teams, and sports apparel retailers.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80" alt="Custom athletic wear design and display">
+                    <div class="service-card-body">
+                        <h3>Custom Team Branding</h3>
+                        <p>Specialized apparel branding and custom technical gear manufacturing tailored for athletic organizations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="contact-box">
+                <div class="contact-info">
+                    <h2>Connect With Our Team</h2>
+                    <p>Inquire about wholesale catalogs, retail partnerships, or product availability with Titan Performance Apparel today.</p>
+
+                    <div class="info-row">
+                        <i data-lucide="mail"></i>
+                        <div>
+                            <label>Direct Support</label>
+                            <strong>contact@titanperformanceapparel.org</strong>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i data-lucide="phone"></i>
+                        <div>
+                            <label>Telephone Line</label>
+                            <strong>+1 352 770 6935</strong>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i data-lucide="map-pin"></i>
+                        <div>
+                            <label>Douglasville Office</label>
+                            <strong>8764 Hamil Ct Douglasville, GA, 30135-7551 United States</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="event.preventDefault();">
+                    <div class="form-row">
+                        <input type="text" placeholder="Full Name / Company" required>
+                        <input type="text" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" placeholder="Email Address" required>
+                        <select required>
+                            <option value="" disabled selected>Select Inquiry Type</option>
+                            <option>Wholesale & Retail Inquiry</option>
+                            <option>Bulk Order Distribution</option>
+                            <option>Custom Team Branding</option>
+                        </select>
+                    </div>
+                    <textarea rows="5" placeholder="Specify your apparel requirements, order volume, or retail inquiry..." required></textarea>
+                    <button type="submit" class="submit-btn">Send Wholesale Inquiry</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal-overlay">
+        <div class="modal-body">
+            <button class="close-btn" onclick="togglePrivacyModal()"><i data-lucide="x" size="24"></i></button>
+            <h3>Privacy Policy</h3>
+
+            <h4>1. Information Collection</h4>
+            <p>TITAN PERFORMANCE APPAREL LLC collects personal and corporate contact details submitted via form inquiries strictly to handle retail orders and wholesale partnership communications.</p>
+
+            <h4>2. Data Security & Confidentiality</h4>
+            <p>We maintain rigorous administrative safeguards to protect client and partner information. Details are kept completely confidential and are never sold or shared with third parties.</p>
+
+            <h4>3. Compliance Contact</h4>
+            <p>For questions regarding our privacy practices, please contact contact@titanperformanceapparel.org.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrapper">
+            <p>&copy;  TITAN PERFORMANCE APPAREL LLC. All rights reserved. Douglasville, GA.</p>
+            <div class="footer-links">
+                <a onclick="togglePrivacyModal()">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function switchDeck(index) {
+            const buttons = document.querySelectorAll('.deck-tab-btn');
+            const panels = document.querySelectorAll('.deck-panel');
+
+            buttons.forEach((btn, i) => {
+                btn.classList.remove('active');
+                if (i === index) btn.classList.add('active');
+            });
+
+            panels.forEach((panel, i) => {
+                panel.classList.remove('active');
+                if (i === index) panel.classList.add('active');
+            });
+        }
+
+        function togglePrivacyModal() {
+            const modal = document.getElementById('privacy-modal');
+            modal.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
